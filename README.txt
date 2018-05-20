@@ -67,6 +67,7 @@ $ virtualenv nearest_store
 New python executable in /Users/shanker/testing/nearest_store/bin/python
 Installing setuptools, pip, wheel...done.
 
+$ cd nearest_store
 $ source bin/activate
 
 $ pip install docopt pymorton
