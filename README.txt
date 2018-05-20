@@ -54,12 +54,27 @@ the tree to disk, so my program will take O(Nlog(N)) time since it constructs
 the tree every time for each query. It is however not too difficult to persist 
 the tree to disk using some Graph DB.
 
-To run the program, create a virtualenv environment and install the following 
-packages:
+To run the program, create a virtualenv environment and execute the following steps:
 
-json
-docopt
-pymorton
+$ git clone https://github.com/nshanker/nearest_store.git
+Cloning into 'nearest_store'...
+remote: Counting objects: 16, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 16 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (16/16), done.
+
+$ virtualenv nearest_store
+New python executable in /Users/shanker/testing/nearest_store/bin/python
+Installing setuptools, pip, wheel...done.
+
+$ source bin/activate
+
+$ pip install docopt pymorton
+Collecting docopt
+Collecting pymorton
+  Using cached https://files.pythonhosted.org/packages/c6/8d/906ba6d4266d7696547b8b70e08423975243c7339fe1ccf4bdbc42478394/pymorton-1.0.5-py2.py3-none-any.whl
+Installing collected packages: docopt, pymorton
+Successfully installed docopt-0.6.2 pymorton-1.0.5
 
 $ python find_store.py 
 
@@ -68,11 +83,6 @@ Usage:
   find_store --address="<address>" [--units=(mi|km)] [--output=text|json]
   find_store --zip=<zip>
   find_store --zip=<zip> [--units=(mi|km)] [--output=text|json]
-
---units defaults to 'mi'les and --output defaults to text.
-
-I've tried it on a few addresses and zip codes and it seems to return the 
-correct result.
 
 To run tests:
 
