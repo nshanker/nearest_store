@@ -4,8 +4,6 @@ README:
 This program reads a csv file of store-locations and finds the closest
 store to a query address.
 
-See problem statement here: https://github.com/groveco/code-challenge
-
 Finding the nearest store to a given address (or latitude/longitude) is
 a nearest-neighbor search problem. There are several approaches. One could 
 check the "distance" of the query address Q from each store in our CSV
